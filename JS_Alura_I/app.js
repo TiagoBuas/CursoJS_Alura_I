@@ -11,12 +11,12 @@ let numeroDoJogo;
 //Chama da exibirTextoNaTela para o início do jogo
 document.addEventListener('DOMContentLoaded', function(){
     exibirTextoNaTela('h1', 'jogo do número secreto');
-    exibirTextoNaTela('p', 'Selecione um número de 1 a 10');
+    exibirTextoNaTela('p', 'Selecione um número de 10 a 100');
 });
  //Função que cria randomicamente o número secreto e armazena na variável númeroDoJogo, 
  //ela também já adiciona esse número a uma lista, afim de não haver repetição do número secreto até os 10 números serem escolhidos
 function numeroSecreto(){
-    numeroDoJogo = parseInt(Math.random() * 10 + 1);
+    numeroDoJogo = parseInt(Math.random() * 100 + 1);
     if (numerosEscolhidos.includes(numeroDoJogo)){
         numeroSecreto();
     }   else{
